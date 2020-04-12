@@ -20,13 +20,7 @@ library(leaflet.extras)
 invisible(capture.output( # to silence st_read output
 buffer <- st_read("C:/doctorat/buffer_1km.shp")
 ))
-invisible(capture.output(
-maison <- st_read("C:/doctorat/maison.shp")
-))
-
 buffer = st_transform(buffer, crs = 4326)
-
-maison = st_transform(maison, crs = 4326)
 ```
 
 
