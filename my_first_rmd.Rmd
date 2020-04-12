@@ -1,0 +1,44 @@
+---
+title: "1km_buffer"
+author: "Antoine"
+date: "12 avril 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exemple of 1km buffer
+
+```{r readshapefiles, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(leaflet.extras)
+
+invisible(capture.output( # to silence st_read output
+buffer <- st_read("C:/doctorat/buffer_1km.shp")
+))
+invisible(capture.output(
+maison <- st_read("C:/doctorat/maison.shp")
+))
+
+buffer = st_transform(buffer, crs = 4326)
+
+maison = st_transform(maison, crs = 4326)
+```
+
+
+```{r displaymap, echo=FALSE}
+leaflet() %>%
+  addTiles( urlTemplate = "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png") %>%
+  setView( lng = -1.6843,
+           lat = 48.099,
+           zoom = 14 ) %>%
+  addFullscreenControl() %>%
+  addPolygons(data = buffer,
+              color = "#2F2",
+              fillColor = "#2F2",
+              fillOpacity = 0.2)
+```
