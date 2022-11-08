@@ -1,0 +1,122 @@
+<html>
+<title>Analyse spatiale des agroécosystèmes avec R </title>
+<body>
+<h1> Formation : analyse spatiale des agroécosystèmes avec R </h1>
+
+<h2>CONTEXTE</h2>
+<p>
+Cette formation s’est déroulée sur 3 jours (19h00) en présentiel à l’UMR SAS les 31 Août, 7 Septembre et 10 Septembre 2021. Elle a été financée par l’UMR SAS et réalisée dans le cadre de la formation interne des agents de l’UMR SAS.</p>
+<p>Le public visé est des personnes ayant des bases en R et/ou des compétences avancées dans un autre langage de programmation et/ou des connaissances en SIG, ET avec un intérêt pour le traitement automatisé de données spatialisées, via le langage de programmation R.</p>
+<p>De par son format, cette formation est adaptée à l’autoformation. Le nombre d’heures nécessaires pour l’effectuer pouvant varier selon votre familiarité avec R et vos compétences en programmation/SIG.</p>
+<p>Sept modules ont été dispensés, dont deux modules (2 et 3) n’étant pas propres à l’analyse de données spatiales : </p>
+<ol type="1">
+<li><a href = "https://antoine-csqn.github.io/rspatial_formation/1_Introduction.html">Introduction : Motivations et exemples (1h)</a></li>
+<li><a href = "https://antoine-csqn.github.io/rspatial_formation/2_ManipulationDeDonnees.html">Manipulation de données avec le tidyverse (1h30)</a></li>
+<li><a href = "https://antoine-csqn.github.io/rspatial_formation/3_ggplot2Bases.html">Les bases de ggplot (1h)</a></li>
+<li>Analyse de données vectorielles géolocalisées avec le package sf (<a href = "https://antoine-csqn.github.io/rspatial_formation/4_sf_partie1.html">Partie 1 </a> et <a href = "https://antoine-csqn.github.io/rspatial_formation/4_sf_partie2.html">Partie 2 </a>, 7h30)</li>
+<li><a href = "https://antoine-csqn.github.io/rspatial_formation/5_Rasters.html">Analyse de données raster avec le package raster (4h)</a></li>
+<li><a href = "https://antoine-csqn.github.io/rspatial_formation/6_Delimitation_BV_Whitebox.html">Délimitation de bassins versants et analyse de terrain avec le package whitebox (2h00)</a></li>
+<li><a href = "https://antoine-csqn.github.io/rspatial_formation/7_Cartographie.htm">Cartographie thématique avec ggplot et tmap (2h)</a></li>
+</ol>
+
+<ul>
+<li>Organisation de la formation : Blandine Lemercier, UMR SAS </li>
+<li>Liaison avec la formation interne INRAE : Nouraya Akkal-Corfini, UMR SAS</li>
+<li>Réalisation de la formation : Antoine Casquin, UMR SAS</li>
+ </ul>
+
+<h2>CONTENU DETAILLE DE LA FORMATION</h2>
+<ol type="1">
+<li>Introduction : Motivations et exemples (1h)</li>
+<ol type="1">
+<li>Intérêt d’un flux de travail automatisé</li>
+<li>Accès aux packages métiers et APIs</li>
+<li>Galerie de cartes réalisées en R</li>
+</ol>
+<li>Manipulation de données avec le tidyverse (1h30)</li>
+<ol type="1">
+<li>Chargement de .csv</li>
+<li>Manipulation de données via les verbes du package dplyr : select, filter, mutate, group_by, summarise …</li>
+<li>Utilisation du « pipe » pour enchainer les traitements sur les données</li>
+<li>Exercices et corrections sur des données multi-sites / multi-dates de qualité de l’eau</li>
+</ol>
+<li>Bases de ggplot2 (1h)</li>
+<ol type="1">
+<li>Montage d'un ggplot : exemples pas à pas (« points », « lignes », « facettes », « tuiles » …)</li>
+<li>Exercices et corrections sur des données multi-sites / multi-dates de qualité de l’eau</li>
+</ol>
+<li>sf : LE package pour le traitement et l’analyse de données vectorielles géolocalisées en R (7h30)</li>
+<ol type="1">
+<li>Partie 1</li>
+<ol type="1">
+<li>Fonctionnement du package sf</li>
+<li>Chargement de données spatialisées et structure d’un objet sfc</li>
+<li>Systèmes de coordonnées</li>
+<li>Visualisation rapide (plot, tmap et ggplot)</li>
+<li>Opérations sur les attributs</li>
+<li>Opérations spatiales de type « confirmation » : contains, touches, is_within, is_within_distance …</li>
+<li>Exercices en deux parties : Sélection par attribut et relations spatiales simples (4_1, basé sur la BD Carto) et Imbrications multiples (4_2, basé sur la délimitation des BV bretons)</li>
+</ol>
+<li>Partie 2</li>
+<ol type="1">
+<li>Transformations et projections</li>
+<li>Calcul d’aires et de longueurs</li>
+<li>Opérations spatiales : Recadrage, Buffer, Intersection, Union, Agrégation …</li>
+<li>Inversion de coordonnées</li>
+<li>Jointures sur les attributs</li>
+<li>Jointures spatiales</li>
+<li>Pour aller plus loin</li>
+<li>Exercices et corrections : méthaniseurs et petites régions agricoles en Bretagne (4_3)</li>
+</ol>
+</ol>
+<li>Traitement et analyse de données raster avec {raster} (4h)</li>
+<ol type="1">
+<li>Propriétés des rasters et visualisation rapide</li>
+<li>Extraction selon une emprise ou un masque</li>
+<li>Préparer un jeu de données raster pour l’analyse : projection, transformation, ré-échantillonage, « brique » de rasters</li>
+<li>Opérations sur les rasters : Reclassification, Opérations arithmétiques, Autres opérations</li>
+<li>Statistiques zonales</li>
+<li>Calculs sur des rasters ou bien des polygones ?</li>
+<li>Exercice</li>
+<li>Pour aller plus loin : {stars} et {terra}, le futur de l’analyse de raster en R. Lien vers un workshop {terra} récent. </li>
+</ol>
+<li>Analyse de terrain et délimitation de bassins versants avec {whitebox} (2h)</li>
+<ol type="1">
+<li>Description du package whitebox et alternatives</li>
+<li>Principes généraux de fonctionnement du package</li>
+<li>Délimitation de bassins versants : exemple de Naizin : préparation des données, recollage des points sur le réseau hydrographique, délimitation « par lot », conversion en polygones</li>
+<li>Calcul d'indices topographique avec whitebox : pente, orientation, courbure …</li>
+<li>Calcul d’indices topographiques pour n BVs : initialisation et boucle (distances à l’exutoire, distances à l’hydrographie, flux accumulés sur les versants …)</li>
+</ol>
+<li>Cartographie thématique avec R : exemples avec ggplot2 et tmap (2h)</li>
+<ol>
+<li>Echelles de couleurs (catégorielle, séquentielle, divergente)</li>
+<li>Planche avec plusieurs cartes/variables : méthode « facet_wrap » et méthode « patchwork » (ggplot2)</li>
+<li>Ajouter des éléments cartographiques avec le package ggspatial</li>
+<li>Exemples vectoriel et raster avec le package tmap, export « figure » et export web.</li>
+</ol>
+</ol>
+
+<h2>MATERIEL PEDAGOGIQUE</h2>
+<p>Le dossier de la formation contient ce Lisez-moi à la racine et quatre sous-dossiers : cheat-sheet, exercice, installation, et slide.</p>
+<h3>Installation du poste de travail</h3>
+<p>Dans le dossier installation, deux fichiers sont présents : Configuration du poste de travail – Rspatial.docx qui est un tutoriel pour mettre à jour R et un script install_packages.R qui installe automatiquement les packages utilisés au long de la formation.</p>
+<h3>Slides</h3>
+<p>Des slides comprenant une partie théorique courte et de nombreux exemples de codes commentés sont disponibles pour chaque module (sauf le 7). Ces slides sont au format .html mais sont utilisables hors-ligne. Ils ont la particularité d’avoir été écrits en RMarkdown, avec le package xaringan. Les sources sont mises à disposition dans le sous dossier source. Pour les compiler, il est nécessaire d’installer quelques packages en plus (voir code source), et de copier le sous-dossier exercice/raw_data dans le sous-dossier slide/source.</p>
+<h3>Exercices</h3>
+<p>Pour les modules 2, 3, 4.1, 4.2 et 5, des exercices réalisables à partir du contenu des slides sont disponibles. A chacun de ces modules correspond un fichier xxx_Enonce.R et un fichier xxx_Correction.R. Les corrections sont très largement commentées et sont complémentaires des slides, il est recommandé de les lire même si vous n’avez pas rencontré de difficulté pour résoudre les exercices. Pour certaines questions, plusieurs manières de répondre à la question sont discutées. </p>
+<p>Les données se trouvent dans la un sous-dossier raw_data. Afin de réaliser facilement les exercices, il est conseillé de définir le répertoire de travail de R comme celui où se trouve le dossier exercice. Des sous-dossiers xxx_output vides servent à l’export des résultats pour chaque exercice, et un dossier output_correction contient les outputs (.png, .shp, etc.) attendus pour chaque exercice. </p>
+<p>Un script 7_Cartographie.R est à la fois le contenu du module 7 (cartographie thématique) et sert de base pour réaliser vos propres tests pour la réalisation de cartes en R. La première partie traite des échelles de couleurs (palettes) en R/ggplot2 et peut être utile en dehors du strict traitement/analyse de données spatiales. </p>
+<h3>Données brutes (raw_data)</h3>
+<p>Les données utilisées dans les slides à titre d’exemple sont aussi celles sur lesquelles se basent les exercices. Ces données sont libres et peuvent être rediffusées, pourvu que la source soient indiquées.</p>
+<ul>
+<li>Jeu de données Yvel :données spatio temporelles de de qualité de l’eau, délimitation de petits bassins versants, hydrographie, RPG 2018 </li>
+<li>BD Carto, région 53-Bretagne (IGN)</li>
+<li>Jeu de données sur les méthaniseurs en France (2020)</li>
+<li>MNT 25 m des départements bretons (IGN)</li>
+<li>Jeu de données Naizin : délimitation, extrait image Landsat 8 </li>
+</ul>
+<h3>« Cheat-sheets »</h3>
+<p>Ressources externes, 4 feuilles d’aides pour les packages ggplot, dplyr, tidyr et sf qui sont utilisés au long de cette formation (source : https://www.rstudio.com/resources/cheatsheets/ et https://github.com/rstudio/cheatsheets/blob/master/sf.pdf).  Il est recommandé de les imprimer. Elles peuvent être très utiles pour réaliser les exercices/vos premiers scripts, et permettent d’avoir un aperçu général des méthodes disponibles dans chaque package. </p>
+</body>
+</html>
